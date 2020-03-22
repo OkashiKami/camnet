@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "180799477421",
+    "firebase_url": "https://camsnet-1d14b.firebaseio.com",
+    "project_id": "camsnet-1d14b",
+    "storage_bucket": "camsnet-1d14b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180799477421:android:d8de17ceacf93ef2cb9824",
+        "android_client_info": {
+          "package_name": "comwicky.camsnet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "180799477421-crfo7qjogsg1etluk7q8i27favijefuu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdjw6DB7DmgHkVPXMQ-CFjDw7cZ1UNLJA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "180799477421-crfo7qjogsg1etluk7q8i27favijefuu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
