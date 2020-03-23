@@ -6,12 +6,27 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="comwicky.camsnet" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="537a21f0-254a-4a0e-a853-c4fd5773873b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/wicky/camsnet/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/wicky/camsnet/Settings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/.vs/Camsnet-/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/.vs/Camsnet-/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/.vs/Camsnet-/v16/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/.vs/Camsnet-/v16/Server/sqlite3/storage.ide" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/.vs/Camsnet-/v16/Server/sqlite3/storage.ide-shm" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/.vs/Camsnet-/v16/Server/sqlite3/storage.ide-shm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/.vs/Camsnet-/v16/Server/sqlite3/storage.ide-wal" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/.vs/Camsnet-/v16/Server/sqlite3/storage.ide-wal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Camsnet/Camsnet.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Camsnet/Camsnet.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Camsnet/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Camsnet/Form1.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Camsnet/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Camsnet/Form1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Camsnet/obj/Debug/Camsnet.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Camsnet/obj/Debug/Camsnet.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Camsnet/obj/Debug/DesignTimeResolveAssemblyReferences.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Camsnet/obj/Debug/DesignTimeResolveAssemblyReferences.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Camsnet/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Camsnet/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Camsnet/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Camsnet/packages.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/packages/FireSharp.1.1.0/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/packages/FireSharp.1.1.0/FireSharp.1.1.0.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/packages/FireSharp.1.1.0/lib/net45/FireSharp.dll" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +34,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="4944363045553398" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -108,7 +124,7 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Android-app" type="AndroidRunConfigurationType" factoryName="Android App">
+    <configuration name="Android-app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="Android-app" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />

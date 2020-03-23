@@ -1,73 +1,102 @@
 package com.wicky.camsnet;
 
-import android.util.Log;
+import android.os.Handler;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ToggleButton;
 
 import androidx.annotation.NonNull;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.FirebaseFirestore;
-
-import java.util.HashMap;
-import java.util.Map;
+import com.google.firebase.database.ValueEventListener;
 
 class Settings implements View.OnClickListener {
     private static final String TAG = "Settings";
     private final MainActivity activity;
-    private FirebaseDatabase db;
-    private final View view;
+    private DatabaseReference db;
+    public final View view;
 
     private EditText ip_et;
     private EditText port_et;
-    private ToggleButton tcp_toggle;
+    private Integer cameraX;
+    private Integer cameraY;
+    private Integer cameraZ;
 
-    public Settings(MainActivity activity, View view) {
+    public Settings(MainActivity activity, View v) {
         this.activity = activity;
-        this.view = view;
-        db = FirebaseDatabase.getInstance();
+        this.view = v;
+        db = FirebaseDatabase.getInstance().getReference();
         view.findViewById(R.id.exit_settings).setOnClickListener(this);
         view.findViewById(R.id.submit_settings).setOnClickListener(this);
-
         ip_et = view.findViewById(R.id.ip_et);
         port_et = view.findViewById(R.id.port_et);
-        tcp_toggle = view.findViewById(R.id.useTcp_toggle);
         LoadSettings();
     }
 
+
     private void LoadSettings() {
-        DocumentReference docRef = db.getReference("camsnet").child("settings");
-        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+        db.child("camsnet/settings/ip").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if (task.isSuccessful()) {
-                    DocumentSnapshot document = task.getResult();
-                    if (document.exists()) {
-                        ip_et.setText((String)document.get("ip"));
-                        port_et.setText((String)document.get("port"));
-                        tcp_toggle.setChecked((Boolean)document.get("tcp"));
-                    } else {
-                        Log.d(TAG, "No such document");
-                    }
-                } else {
-                    Log.d(TAG, "get failed with ", task.getException());
-                }
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                ip_et.setText(dataSnapshot.getValue(String.class));
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+        db.child("camsnet/settings/port").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                port_et.setText(dataSnapshot.getValue(String.class));
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+        db.child("camsnet/settings/xAxis").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                cameraX = dataSnapshot.getValue(Integer.class);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+        db.child("camsnet/settings/yAxis").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                cameraY = dataSnapshot.getValue(Integer.class);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+        db.child("camsnet/settings/zAxis").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                cameraZ = dataSnapshot.getValue(Integer.class);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
             }
         });
     }
     private void SaveSettings(){
-        DocumentReference docRef = db.collection("camsnet").document("settings");
-
-        Map<String, Object> properties = new HashMap<>();
-        properties.put("ip", ip_et.getText().toString());
-        properties.put("port", port_et.getText().toString());
-        properties.put("tcp", tcp_toggle.isChecked());
-        docRef.set(properties);
+       db.child("camsnet/settings/ip").setValue(ip_et.getText().toString());
+       db.child("camsnet/settings/port").setValue(port_et.getText().toString());
     }
 
     @Override
