@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Android-Camsnet.iml" filepath="$PROJECT_DIR$/Android-Camsnet.iml" group="Camsnet" />
+      <module fileurl="file://$PROJECT_DIR$/app/Android-app.iml" filepath="$PROJECT_DIR$/app/Android-app.iml" group="Camsnet/app" />
       <module fileurl="file://$PROJECT_DIR$/Camsnet.iml" filepath="$PROJECT_DIR$/Camsnet.iml" group="Camsnet" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Camsnet/app" />
     </modules>
